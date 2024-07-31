@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    transition: all .2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(images/background-site.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgb(0, 0, 90);
+}
+
+header h1 {
+    margin: 0 auto;
+    line-height: 4rem;
+    text-align: center;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.main-text {
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.main-text h1 {
+    font-size: 3rem;
+}
+
+.main-text h2 {
+    font-size: 2rem;
+}
+
+.call-click {
+    margin-top: 2rem;
+    width: 50%;
+    border-radius: 40px;
+    background-color: rgba(150, 150, 0, 0.7);
+    border: 3px solid white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.call-click a {
+    color: white;
+    text-decoration: none;
+}
+
+.call-click:hover {
+    background-color: rgb(150, 150, 0);
+}
+
+#about-us {
+    width: 70vw;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 3.5rem;
+}
+
+#about-us h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#about-us p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+#gallery {
+    background-color: white;
+    padding: 3rem;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+#gallery p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.photos {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); */
+    grid-template-areas: "photo-1 photo-2 photo-2"
+        "photo-3 photo-2 photo-2"
+        "photo-4 photo-5 photo-6"
+        "photo-7 photo-8 photo-9"
+        "photo-10 photo-10 photo-11"
+        "photo-10 photo-10 photo-12";
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.photo {
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.photo_1 {
+    grid-area: photo-1;
+}
+
+.photo_2 {
+    grid-area: photo-2;
+}
+
+.photo_3 {
+    grid-area: photo-3;
+}
+
+.photo_4 {
+    grid-area: photo-4;
+}
+
+.photo_5 {
+    grid-area: photo-5;
+}
+
+.photo_6 {
+    grid-area: photo-6;
+}
+
+.photo_7 {
+    grid-area: photo-7;
+}
+
+.photo_8 {
+    grid-area: photo-8;
+}
+
+.photo_9 {
+    grid-area: photo-9;
+}
+
+.photo_10 {
+    grid-area: photo-10;
+}
+
+.photo_11 {
+    grid-area: photo-11;
+}
+
+.photo_12 {
+    grid-area: photo-12;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#roads {
+    background-color: rgb(0, 0, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.our-roads {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+
+.list-roads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.list-roads p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+.road-photo {
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+#contacts {
+    background-color: white;
+    padding: 2rem;
+}
+
+#contacts h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#contacts h3 {
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+
+}
+
+#contacts>div {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+}
+
+#contacts form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#contacts form>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 1.2rem;
+}
+
+#contacts form>div label {
+    font-weight: 700;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 756px) {
+    header h1 {
+        margin: .5rem auto;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        gap: 1.2rem;
+        background-color: rgb(0, 0, 90);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .navbar ul.active {
+        display: flex;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .navbar ul li a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        color: white;
+        line-height: 2rem;
+        margin: 0 auto 5px;
+    }
+
+    .list-roads p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #contacts h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #contacts>div {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+        margin-bottom: 50px;
+    }
+
+    #contacts>div>div:nth-child(1) {
+        height: 250px;
+    }
+
+    #map {
+        height: 200px;
+    }
+}
+
+@media (max-width: 556px) {
+    html {
+        font-size: 65%;
+    }
+
+    .road-photo {
+        max-width: 200px;
+    }
+}
